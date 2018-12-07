@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/precenter.css">
+</head>
+
+<body onhashchange="getHash()">
+	<div>
+		<div class="header preheader">
+			<div class="center headerbox clearfix">
+				<div class="fl logo">
+					<img src="../images/home1_13.png">
+				</div>
+				<div class="fr navBar">
+					<ul>
+						<li>
+							<a href="index.html#page1">资源搜索</a>
+						</li>
+						<li>
+							<a href="index.html#page2">研究动态</a>
+						</li>
+						<li>
+							<a href="#page3">生平业绩</a>
+						</li>
+						<li>
+							<a href="#page4">文本资源</a>
+						</li>
+						<li>
+							<a href="#page5">多媒体资源</a>
+						</li>
+						<li>
+							<a href="#page6">专题讲座</a>
+						</li>
+						<li>
+							<a href="#page7">3D图书</a>
+						</li>
+						<li>
+							<a href="#page8">新闻资讯</a>
+						</li>
+					</ul>
+				</div>
+				<div class="fr precenter">
+					<img src="../images/home1_16.png" alt="">
+					<p>&nbsp;用户名&nbsp;&nbsp;&nbsp;&nbsp;></p>
+				</div>
+			</div>
+		</div>
+		<div class="breadcrumb">
+			<p class="nowadr">当前位置：首页 >>
+				<span>个人中心</span>
+			</p>
+		</div>
+		<div class="mainconbox">
+			<div class="mainbox">
+				<div class="preinfo">
+					<ul>
+						<li>
+							<img src="../images/home1_16.png" alt="">
+							<p>用户名</p>
+							<p>借阅证号：876543210</p>
+						</li>
+						<li>
+							<a href="#set" class="userset">账户设置&nbsp;&nbsp;></a>
+						</li>
+					</ul>
+				</div>
+				<div class="preconbox">
+					<div class="precontit">
+						<ul>
+							<li class="active">我的书单</li>
+							<li>我的收藏</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="booklist">
+							<li>
+								<img src="../images/precenter/precenter_12.png" alt="">
+								<p>《毛泽东点评曾国藩》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_14.png" alt="">
+								<p>《诗人毛泽东》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_16.png" alt="">
+								<p>《诗人毛泽东》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_18.png" alt="">
+								<p>《毛泽东选集》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_20.png" alt="">
+								<p>《少年毛泽东》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_22.png" alt="">
+								<p>《今天再读毛泽东》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_12.png" alt="">
+								<p>《毛泽东点评曾国藩》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_14.png" alt="">
+								<p>《诗人毛泽东》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_16.png" alt="">
+								<p>《诗人毛泽东》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_18.png" alt="">
+								<p>《毛泽东选集》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_20.png" alt="">
+								<p>《少年毛泽东》</p>
+							</li>
+							<li>
+								<img src="../images/precenter/precenter_22.png" alt="">
+								<p>《今天再读毛泽东》</p>
+							</li>
+						</ul>
+					</div>
+					<ul class="pagination" id="pagination2"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="accountbox" style="display: none">
+			<div class="accountmain">
+				<div class="accountcon">
+					<div class="actit">
+						<img src="../images/precenter/precenter_31.png" alt="">
+						<p>用户名</p>
+					</div>
+					<div class="actset">
+						<p>账号设置</p>
+						<p>保存</p>
+					</div>
+					<div class="actupdate">
+						<p>借阅证号：<span>135******6877</span></p>
+						<p>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<span>**********</span><span class="updatepwd">修改</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jqpage.js"></script>
+<script>
+	$.jqPaginator('#pagination1', {
+		totalPages: 100,
+		visiblePages: 10,
+		currentPage: 3,
+		onPageChange: function (num, type) {
+			$('#p1').text(type + '：' + num);
+		}
+	});
+	$.jqPaginator('#pagination2', {
+		totalPages: 100,
+		visiblePages: 10,
+		currentPage: 3,
+		first: '<li class="first"><a href="javascript:;"><<</a></li>',
+		prev: '<li class="prev"><a href="javascript:;"><</a></li>',
+		next: '<li class="next"><a href="javascript:;">></a></li>',
+		last: '<li class="last"><a href="javascript:;">>></a></li>',
+		page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+		onPageChange: function (num, type) {
+			console.log(type + '：' + num)
+		}
+	});
+	if(window.location.hash=='#set'){
+		$('.accountbox').css('display','block')
+		$('.mainconbox').css('display','none')
+	}
+	function getHash(){
+		var hash = window.location.hash;
+		switch(hash){
+			case '#set':
+				$('.accountbox').css('display','block')
+				$('.mainconbox').css('display','none')
+				break;
+			default:
+				$('.accountbox').css('display','none')
+				$('.mainconbox').css('display','block')
+				break;
+		}
+	}
+	$('.updatepwd').on('click', function(){
+		window.location.href = 'retrievepwd.html'
+	})
+</script>

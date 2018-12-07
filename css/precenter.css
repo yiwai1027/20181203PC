@@ -1,0 +1,144 @@
+.preheader{
+	height: 270px;
+	background: url(../images/precenter/precenter_03.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+}
+.preinfo{
+	height: 55px;
+	width: 966px;
+	padding: 5px 30px;
+	border-radius: 5px;
+	margin-top: 17px;
+	font-size: 16px;
+	box-shadow: 0px 0px 20px 1px #bbbbbb;
+}
+.preinfo ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.preinfo .userset{
+	cursor: pointer;
+	margin-top: 4px;
+	color: #000000;
+}
+.preinfo ul li:nth-child(1){
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+.preinfo ul li:nth-child(1) p{
+	margin: 3px 10px 0 10px;
+}
+.preinfo ul li:nth-child(1) p:last-child{
+	color: #cac9c9;
+}
+.preconbox{
+	height: 740px;
+	width: 966px;
+	border-radius: 5px;
+	margin: 20px 0 20px 0;
+	font-size: 16px;
+	box-shadow: 0px 0px 20px 1px #bbbbbb;
+}
+.preconbox .precontit{
+	height: 50px;
+	padding: 0 30px;
+	line-height: 50px;
+	border-bottom: 1px solid #bfbebc;
+}
+.preconbox .precontit ul{
+	display: flex;
+	font-size: 20px;
+}
+.preconbox .precontit ul .active{
+	color: #c41b09;
+}
+.preconbox .precontit ul li:nth-child(2){
+	margin-left: 60px;
+}
+.preconbox .booklist{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	text-align: center;
+	font-size: 14px;
+	color: #595858;
+	padding: 47px 30px 0 20px;
+}
+.preconbox .booklist li{
+	width: 16.6666%;
+	cursor: pointer;
+}
+.preconbox .booklist p{
+	line-height: 35px;
+}
+
+.breadcrumb .nowadr{
+	margin: 0 auto;
+	width: 966px;
+}
+.center{
+	width: 966px;
+}
+.accountmain{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+}
+.accountmain .accountcon{
+	width: 615px;
+	padding: 76px 0;
+}
+.accountcon>div{
+	width: 100%;
+}
+.actit{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.actit img{
+	width: 100px;
+	cursor: pointer;
+}
+.actit p{
+	width: 100%;
+	margin: 15px 0;
+	text-align: center;
+}
+.actset{
+	display: flex;
+	justify-content: space-between;
+	margin: 33px 0;
+	align-items: center;
+}
+.actset p:nth-child(2){
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFF;
+	background: #c41b09;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.actupdate{
+	margin-left: 45px;
+	font-size: 14px;
+}
+.actupdate p{
+	line-height: 30px;
+	color: #7d7d7d;
+}
+.actupdate p span{
+	color: #000000;
+}
+.actupdate p .updatepwd{
+	color: #c41b09;
+	margin-left: 55px;
+	cursor: pointer;
+}

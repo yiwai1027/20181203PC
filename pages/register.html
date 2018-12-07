@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>注册</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+	<div class="rboxbg">
+		<ul id="leftmenu" class="leftmenu">
+			<li>
+				<img src="../images/home1_37.png" alt="">
+			</li>
+			<li>
+				<img src="../images/home1_42.png" alt="">
+			</li>
+			<li>
+				<img src="../images/home1_51.png" alt="">
+			</li>
+			<li>
+				<img src="../images/home1_56.png" alt="">
+			</li>
+		</ul>
+		<!-- 输入手机号 -->
+		<div id="register" class="rcontent">
+			<div class="regtit">
+				<p>
+					<span class="active">1.注册账号</span>
+					<span class="line"></span>
+					<span>2.信息验证</span>
+					<span class="line"></span>
+					<span>3.注册成功</span>
+				</p>
+			</div>
+			<div class="fmbox">
+				<div class="phoneip">
+					<input type="text" placeholder="请输入手机号">
+				</div>
+				<div class="pwdip">
+					<input type="password" placeholder="密码设置6-20个字符">
+				</div>
+				<div class="smscodeip">
+					<input type="text" placeholder="请输入验证码">
+					<img src="../images/register_13.jpg" alt="">
+				</div>
+				<div id="next1" class="next">
+					<p>下一步</p>
+				</div>
+			</div>
+		</div>
+		<!-- 输入短信验证码 -->
+		<div id="infovf" class="rcontent infovf none">
+			<div class="regtit">
+				<p>
+					<span class="">1.注册账号</span>
+					<span class="line"></span>
+					<span class="active">2.信息验证</span>
+					<span class="line"></span>
+					<span>3.注册成功</span>
+				</p>
+			</div>
+			<div class="infovfcon">
+				<div class="infovfbox">
+					<p class="infoprt">短信验证码已经发送至<span>13512346789</span></p>
+					<div class="smscodebox">
+						<input type="text" placeholder="请输入短信验证码">
+						<p>获取验证吗</p>
+					</div>
+					<div id="next2" class="next">
+						<p>注册</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 注册成功 -->
+		<div id="regsuc" class="rcontent regsuc none">
+			<div class="regtit">
+				<p>
+					<span class="">1.注册账号</span>
+					<span class="line"></span>
+					<span class="">2.信息验证</span>
+					<span class="line"></span>
+					<span class="active">3.注册成功</span>
+				</p>
+			</div>
+			<div class="regsucbox">
+				<div class="regmainbox">
+					<img src="../images/register/register_06.png" alt="">
+					<p>恭喜，账号注册成功！</p>
+					<div id="next3" class="next">
+						<p>跳转首页(<span>3</span>)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="fotbg">
+			<div class="fottit">
+				<p>本站导航</p>
+			</div>
+			<div class="bot">
+				<p>
+					<span>地址：韶山毛泽东故居</span>
+					<span>邮箱：maozedong@outlook.com</span>
+				</p>
+				<p>
+					<span>网址：www.jchaoxing.com</span>
+					<span>邮编：00000</span>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="../js/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('#next1').on('click', function(){
+			$('.rcontent').addClass('none');
+			$('.infovf').removeClass('none').addClass('block');
+		})
+		$('#next2').on('click', function(){
+			$('.rcontent').removeClass('block').addClass('none');
+			$('.regsuc').removeClass('none').addClass('block');
+		})
+		$('#next3').on('click', function(){
+			window.location.href = window.location.origin+'/pages/index.html'
+		})
+	})
+</script>

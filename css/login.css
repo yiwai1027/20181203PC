@@ -1,0 +1,148 @@
+.loginbox {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	background: url(../images/loginbg.jpg) no-repeat center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logincon{
+	display: flex;	
+}
+.logincon .prtbox {
+	background: rgba(255, 255, 255, 0.8);
+	width: 507px;
+	height: 251px;
+	position: relative;
+	padding: 30px 40px;
+	font-size: 13px;
+	color: #302f2d;
+	line-height: 25px;
+}
+.logincon .prtbox p:nth-child(1){
+	font-size: 14px;
+}
+.logincon .prtbox::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	right: 0px;
+	width: 0;
+	height: 0;
+	border-top: 30px solid rgba(255, 255, 255, 0.8);
+	border-left: 30px solid transparent;
+}
+
+.logincon .inpbox{
+	padding: 20px;
+	background: #FFF;
+	height: 368px;
+	width: 320px;
+	margin-left: 40px;
+}
+.inpbox .inptit ul{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+	
+}
+.inpbox .inptit ul li{
+	margin: 0 10px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.inpbox .inptit ul span{
+	margin-top: 5px;
+	color: #adadad;
+}
+.on{
+	border-bottom: 2px solid #c40909;
+	color: #c40909;
+}
+.inpbox li{
+	margin-bottom: 18px;
+}
+.inpbox input{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #d9d9d9;
+	border-radius: 5px;
+	padding-left: 5px;
+	font-size: 14px;
+}
+.inpbox .loginbtn{
+	height: 40px;
+	width: 100%;
+	color: #FFF;
+	background: #c40909;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 5px;
+}
+.inpbox .auxiliary{
+	display: flex;
+	justify-content: space-between;
+	margin-top: -10px;
+	font-size: 13px;
+}
+.inpbox .auxiliary span:nth-child(1){
+	color: #302f2d;
+	cursor: pointer;
+}
+.inpbox .auxiliary span:nth-child(2){
+	color: #4971b2;
+	cursor: pointer;
+}
+.inpbox .othertit{
+	text-align: center;
+	color: #c8c8c8;
+	margin-top: -10px;
+}
+.inpbox .othertit:before{
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: #c8c8c8;
+	position: relative;
+	top: 10px;
+	left: 0;
+}
+.inpbox .othermain{
+	display: inline-block;
+	background: #fff;
+	padding: 0 10px 0 10px;
+	position: relative;
+	font-size: 14px;
+	font-weight: 500;
+}
+.inpbox .otherimg{
+	display: flex;
+	justify-content: space-between;
+	margin-top: -10px;
+	padding: 0 17px;
+}
+.inpbox .smslogin .smscode{
+	display: flex;
+	justify-content: space-between;
+}
+.inpbox .smslogin .smscode input{
+	width: 164px;
+	border-radius: 0;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.inpbox .smslogin .smscode p{
+	height: 40px;
+	text-align: center;
+	width: 116px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	line-height: 40px;
+	background: #f6f6f6;
+	color: #c41b09;
+	cursor: pointer;
+}

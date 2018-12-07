@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>登录</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-	
+	<div class="loginbox">
+		<ul id="leftmenu" class="leftmenu">
+			<li>
+				<img src="../images/home1_37.png" alt="">
+			</li>
+			<li>
+				<img src="../images/home1_42.png" alt="">
+			</li>
+			<li>
+				<img src="../images/home1_51.png" alt="">
+			</li>
+			<li>
+				<img src="../images/home1_56.png" alt="">
+			</li>
+		</ul>
+		<div class="logincon">
+			<div class="prtbox">
+				<p>温馨提示：</p>
+				<p>1. 请您先输入账号和密码后点击登录，再进行相应操作。</p>
+				<p>2. 首次登陆后请修改密码，密码由4到14位的数字或字母组成。</p>
+				<p>3. 如登录过期，请重新输入账号、密码进行登录。</p>
+				<p>4. 如有疑问，请与我们联系。</p>
+				<p>&nbsp;&nbsp;电话（传真）：0731-12345678，电子邮箱：maozedong.hn.cn</p>
+			</div>
+			<div class="inpbox">
+				<div class="inptit">
+					<ul id="tittab">
+						<li class="on">账号登录</li>
+						<li>短信登录</li>
+					</ul>
+				</div>
+				<div id="maintab">
+					<ul class="zhlogin">
+						<li><input type="text" placeholder="请输入手机号/邮箱/用户名"></li>
+						<li><input type="password" placeholder="请输入密码"></li>
+						<li><p class="loginbtn">登录</p></li>
+						<li><p class="auxiliary">
+							<span class="goreg">快速注册</span>
+							<span class="gobackpwd">忘记密码？</span>
+						</p></li>
+						<li>
+							<div class="othertit">
+								<span class="othermain">其他登录方式</span>
+							</div>
+						</li>
+						<li class="otherimg">
+							<img src="../images/login_06.png" alt="">
+							<img src="../images/login_09.png" alt="">
+							<img src="../images/login_11.png" alt="">
+						</li>
+					</ul>
+					<ul class="smslogin" style="display: none;">
+						<li><input type="text" placeholder="请输入手机号"></li>
+						<li class="smscode">
+							<input type="text" placeholder="请输入短信验证码">
+							<p>获取验证吗</p>
+						</li>
+						<li><p class="loginbtn">登录</p></li>
+						<li><p class="auxiliary">
+							<span class="goreg">快速注册</span>
+							<span>忘记密码？</span>
+						</p></li>
+						<li>
+							<div class="othertit">
+								<span class="othermain">其他登录方式</span>
+							</div>
+						</li>
+						<li class="otherimg">
+							<img src="../images/login_06.png" alt="">
+							<img src="../images/login_09.png" alt="">
+							<img src="../images/login_11.png" alt="">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
+<script src="../js/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('#tittab li').each(function(){
+			$(this).on('click',function(){
+				var index = $(this).index();
+				$(this).siblings('li').removeClass('on').end().addClass('on');
+				$('#maintab ul').hide();
+				$('#maintab ul').eq(index).show();
+			});
+		});
+		$('.goreg').on('click', function(){
+			window.location.href = window.location.origin+'/pages/register.html'
+		})
+		$('.gobackpwd').on('click', function(){
+			window.location.href = window.location.origin+'/pages/retrievepwd.html'
+		})
+	})
+</script>
